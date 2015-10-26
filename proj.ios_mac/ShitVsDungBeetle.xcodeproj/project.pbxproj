@@ -55,6 +55,10 @@
 		B37996521BDE0C3300B6849B /* EnemyBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B379964F1BDE0C3300B6849B /* EnemyBase.cpp */; settings = {ASSET_TAGS = (); }; };
 		B37996551BDE11D600B6849B /* Thief.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37996531BDE11D600B6849B /* Thief.cpp */; settings = {ASSET_TAGS = (); }; };
 		B37996561BDE11D600B6849B /* Thief.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37996531BDE11D600B6849B /* Thief.cpp */; settings = {ASSET_TAGS = (); }; };
+		B37996591BDE41D200B6849B /* TowerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37996571BDE41D200B6849B /* TowerBase.cpp */; settings = {ASSET_TAGS = (); }; };
+		B379965A1BDE41D200B6849B /* TowerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37996571BDE41D200B6849B /* TowerBase.cpp */; settings = {ASSET_TAGS = (); }; };
+		B379965D1BDE45C900B6849B /* ArrowTower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B379965B1BDE45C900B6849B /* ArrowTower.cpp */; settings = {ASSET_TAGS = (); }; };
+		B379965E1BDE45C900B6849B /* ArrowTower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B379965B1BDE45C900B6849B /* ArrowTower.cpp */; settings = {ASSET_TAGS = (); }; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -117,6 +121,10 @@
 		B37996501BDE0C3300B6849B /* EnemyBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBase.h; sourceTree = "<group>"; };
 		B37996531BDE11D600B6849B /* Thief.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Thief.cpp; sourceTree = "<group>"; };
 		B37996541BDE11D600B6849B /* Thief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thief.h; sourceTree = "<group>"; };
+		B37996571BDE41D200B6849B /* TowerBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerBase.cpp; sourceTree = "<group>"; };
+		B37996581BDE41D200B6849B /* TowerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowerBase.h; sourceTree = "<group>"; };
+		B379965B1BDE45C900B6849B /* ArrowTower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrowTower.cpp; sourceTree = "<group>"; };
+		B379965C1BDE45C900B6849B /* ArrowTower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowTower.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -259,6 +267,10 @@
 				B37996501BDE0C3300B6849B /* EnemyBase.h */,
 				B37996531BDE11D600B6849B /* Thief.cpp */,
 				B37996541BDE11D600B6849B /* Thief.h */,
+				B37996571BDE41D200B6849B /* TowerBase.cpp */,
+				B37996581BDE41D200B6849B /* TowerBase.h */,
+				B379965B1BDE45C900B6849B /* ArrowTower.cpp */,
+				B379965C1BDE45C900B6849B /* ArrowTower.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -434,8 +446,10 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				B37996591BDE41D200B6849B /* TowerBase.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				B37996551BDE11D600B6849B /* Thief.cpp in Sources */,
+				B379965D1BDE45C900B6849B /* ArrowTower.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				B379964D1BDE04E400B6849B /* PlayLayer.cpp in Sources */,
 				B37996511BDE0C3300B6849B /* EnemyBase.cpp in Sources */,
@@ -446,10 +460,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B379965E1BDE45C900B6849B /* ArrowTower.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				B379964E1BDE04E400B6849B /* PlayLayer.cpp in Sources */,
 				B37996561BDE11D600B6849B /* Thief.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				B379965A1BDE41D200B6849B /* TowerBase.cpp in Sources */,
 				B37996521BDE0C3300B6849B /* EnemyBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
