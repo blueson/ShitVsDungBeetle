@@ -8,6 +8,7 @@
 
 #include "PlayLayer.h"
 #include "Thief.h"
+#include "GameManager.h"
 
 Scene* PlayLayer::createScene(){
     auto scene = Scene::create();
@@ -69,6 +70,7 @@ void PlayLayer::initPointsVector(float offX){
 
 void PlayLayer::addEnemy(){
     auto thief = Thief::createThief(this->pointsVector);
+    GameManager::getInstance()->enemyVector.pushBack(thief);
     this->addChild(thief);
 }
 

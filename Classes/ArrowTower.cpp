@@ -7,6 +7,7 @@
 //
 
 #include "ArrowTower.h"
+#include "GameManager.h"
 
 bool ArrowTower::init(){
     setScope(90);
@@ -19,6 +20,7 @@ bool ArrowTower::init(){
     rotateArrow = Sprite::createWithSpriteFrameName("arrow.png");
     rotateArrow->setPosition(Vec2(0,baseplate->getContentSize().height/4));
     addChild(rotateArrow);
+    return true;
 }
 
 void ArrowTower::rotateAndShoot(float dt){
@@ -35,13 +37,40 @@ void ArrowTower::rotateAndShoot(float dt){
 }
 
 Sprite* ArrowTower::ArrowTowerBullet(){
-    
+    auto bullet = Sprite::createWithSpriteFrameName("arrowBullet.png");
+    bullet->setPosition(rotateArrow->getPosition());
+    bullet->setRotation(rotateArrow->getRotation());
+    addChild(bullet);
+    return bullet;
 }
 
 void ArrowTower::shoot(){
+    auto gameManager = GameManager::getInstance();
+    auto bulletVector = gameManager->bulletVector;
     
+    if (nearestEnemy != NULL && nearestEnemy->getCurrHp() > 0) {
+        auto currBullet = ArrowTowerBullet();
+        gameManager->bulletVector.pushBack(currBullet);
+        
+        auto moveDuration = getRate();
+        auto shootVector = nearestEnemy->getPosition() - this->getPosition();
+        shootVector.normalize();
+        shootVector = -shootVector;
+        auto farthestDistance = Director::getInstance()->getWinSize().width;
+        auto overshotvector = shootVector * farthestDistance;
+        auto offscreenPoint = (rotateArrow->getPosition() - overshotvector);
+        
+        currBullet->runAction(Sequence::create(MoveTo::create(moveDuration, offscreenPoint)
+                                               ,CallFuncN::create(CC_CALLBACK_1(ArrowTower::removeBullet, this)), NULL));
+        currBullet = NULL;
+    }
 }
 
 void ArrowTower::removeBullet(Node* pSender){
+    auto gameManager = GameManager::getInstance();
+    auto bulletVector = gameManager->bulletVector;
     
+    auto sprite = (Sprite*)pSender;
+    gameManager->bulletVector.eraseObject(sprite);
+    sprite->removeFromParent();
 }

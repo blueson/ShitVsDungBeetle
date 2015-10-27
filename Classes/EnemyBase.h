@@ -23,12 +23,14 @@ public:
     Node* nextPoint();
     void runFllowPoint();
     void setPointsVector(Vector<Node*> points);
+    int getCurrHp() { return currHp;}
 private:
     Vector<Node*> pointsVector;
 protected:
     int pointCounter;
     Animation *animationRight;
     Animation *animationLeft;
+    int currHp;
     CC_SYNTHESIZE(float, runSpeed, RunSpeed);
 };
 
