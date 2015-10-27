@@ -9,10 +9,7 @@
 #ifndef ArrowTower_h
 #define ArrowTower_h
 
-#include "cocos2d.h"
 #include "TowerBase.h"
-
-USING_NS_CC;
 
 class ArrowTower : public TowerBase{
 public:

@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "EnemyBase.h"
 #include "TowerBase.h"
+#include "GroupEnemy.h"
 
 USING_NS_CC;
 
@@ -21,7 +22,7 @@ public:
     Vector<EnemyBase*> enemyVector;
     Vector<TowerBase*> towerVector;
     Vector<Sprite*> bulletVector;
-    
+    Vector<GroupEnemy*> groupVector;
 private:
     static GameManager* instance;
 };

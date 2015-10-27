@@ -14,7 +14,7 @@
 
 USING_NS_CC;
 
-class TowerBase : public Sprite{
+class TowerBase : public Node{
 public:
     TowerBase();
     virtual bool init();

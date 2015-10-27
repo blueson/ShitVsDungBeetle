@@ -13,6 +13,8 @@ bool EnemyBase::init(){
         return false;
     }
     
+    hpPercentage = 100;
+    
     return true;
 }
 
@@ -68,4 +70,26 @@ void EnemyBase::runFllowPoint(){
 void EnemyBase::setPointsVector(Vector<cocos2d::Node *> points){
     this->pointsVector = points;
 }
+
+void EnemyBase::createAndSetHpBar(){
+    hpBgSprite = Sprite::createWithSpriteFrameName("hpBg1.png");
+    printf("width:%f",getContentSize().width);
+    printf("height:%f",getContentSize().height);
+    hpBgSprite->setPosition(Vec2(hpBgSprite->getContentSize().width/2,-hpBgSprite->getContentSize().height/2));
+    addChild(hpBgSprite);
+    
+    hpBar = ProgressTimer::create(Sprite::createWithSpriteFrameName("hp1.png"));
+    hpBar->setType(ProgressTimer::Type::BAR);
+    hpBar->setMidpoint(Vec2(0,0.5f));
+    hpBar->setBarChangeRate(Vec2(1,0));
+    hpBar->setPercentage(hpPercentage);
+    hpBar->setPosition(Vec2(hpBgSprite->getContentSize().width/2,hpBgSprite->getContentSize().height/3*2));
+    hpBgSprite->addChild(hpBar);
+}
+
+void EnemyBase::enemyExpload(){
+    
+}
+
+
 

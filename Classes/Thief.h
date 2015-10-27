@@ -19,6 +19,7 @@ class Thief : public EnemyBase{
 public:
     virtual bool init() override;
     static Thief* createThief(Vector<Node*> points);
+    virtual void enemyExpload();
 };
 
 #endif /* Thief_h */

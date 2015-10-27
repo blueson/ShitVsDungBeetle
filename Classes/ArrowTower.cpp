@@ -20,6 +20,9 @@ bool ArrowTower::init(){
     rotateArrow = Sprite::createWithSpriteFrameName("arrow.png");
     rotateArrow->setPosition(Vec2(0,baseplate->getContentSize().height/4));
     addChild(rotateArrow);
+    
+    schedule(CC_CALLBACK_1(ArrowTower::rotateAndShoot, this),0.5, "shoot");
+    
     return true;
 }
 
@@ -40,6 +43,7 @@ Sprite* ArrowTower::ArrowTowerBullet(){
     auto bullet = Sprite::createWithSpriteFrameName("arrowBullet.png");
     bullet->setPosition(rotateArrow->getPosition());
     bullet->setRotation(rotateArrow->getRotation());
+    GameManager::getInstance()->bulletVector.pushBack(bullet);
     addChild(bullet);
     return bullet;
 }

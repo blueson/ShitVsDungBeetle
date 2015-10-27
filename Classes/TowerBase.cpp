@@ -14,7 +14,7 @@ TowerBase::TowerBase(){
 }
 
 bool TowerBase::init(){
-    if (!Sprite::init()) {
+    if (!Node::init()) {
         return false;
     }
     

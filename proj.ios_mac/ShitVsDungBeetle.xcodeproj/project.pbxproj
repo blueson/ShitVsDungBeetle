@@ -51,6 +51,10 @@
 		9D724C94B3C5C8BCE2A72CC9 /* res in Resources */ = {isa = PBXBuildFile; fileRef = F0014C13A81707C0B4B9B7E0 /* res */; };
 		B33382801BDF2AEB001D2F8F /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B333827F1BDF2AEB001D2F8F /* GameManager.cpp */; settings = {ASSET_TAGS = (); }; };
 		B33382811BDF2AEB001D2F8F /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B333827F1BDF2AEB001D2F8F /* GameManager.cpp */; settings = {ASSET_TAGS = (); }; };
+		B33382851BDF6118001D2F8F /* TowerPanleLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B33382841BDF6118001D2F8F /* TowerPanleLayer.cpp */; settings = {ASSET_TAGS = (); }; };
+		B33382861BDF6118001D2F8F /* TowerPanleLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B33382841BDF6118001D2F8F /* TowerPanleLayer.cpp */; settings = {ASSET_TAGS = (); }; };
+		B33382891BDF857C001D2F8F /* GroupEnemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B33382881BDF857B001D2F8F /* GroupEnemy.cpp */; settings = {ASSET_TAGS = (); }; };
+		B333828A1BDF857C001D2F8F /* GroupEnemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B33382881BDF857B001D2F8F /* GroupEnemy.cpp */; settings = {ASSET_TAGS = (); }; };
 		B379964D1BDE04E400B6849B /* PlayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B379964B1BDE04E400B6849B /* PlayLayer.cpp */; settings = {ASSET_TAGS = (); }; };
 		B379964E1BDE04E400B6849B /* PlayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B379964B1BDE04E400B6849B /* PlayLayer.cpp */; settings = {ASSET_TAGS = (); }; };
 		B37996511BDE0C3300B6849B /* EnemyBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B379964F1BDE0C3300B6849B /* EnemyBase.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -119,6 +123,10 @@
 		8E634592A485B823042DB7E1 /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.7/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
 		B333827F1BDF2AEB001D2F8F /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameManager.cpp; sourceTree = "<group>"; };
 		B33382821BDF2AF9001D2F8F /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		B33382831BDF6108001D2F8F /* TowerPanleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowerPanleLayer.h; sourceTree = "<group>"; };
+		B33382841BDF6118001D2F8F /* TowerPanleLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TowerPanleLayer.cpp; sourceTree = "<group>"; };
+		B33382871BDF8570001D2F8F /* GroupEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupEnemy.h; sourceTree = "<group>"; };
+		B33382881BDF857B001D2F8F /* GroupEnemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GroupEnemy.cpp; sourceTree = "<group>"; };
 		B379964B1BDE04E400B6849B /* PlayLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayLayer.cpp; sourceTree = "<group>"; };
 		B379964C1BDE04E400B6849B /* PlayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayLayer.h; sourceTree = "<group>"; };
 		B379964F1BDE0C3300B6849B /* EnemyBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyBase.cpp; sourceTree = "<group>"; };
@@ -277,6 +285,10 @@
 				B379965C1BDE45C900B6849B /* ArrowTower.h */,
 				B333827F1BDF2AEB001D2F8F /* GameManager.cpp */,
 				B33382821BDF2AF9001D2F8F /* GameManager.h */,
+				B33382831BDF6108001D2F8F /* TowerPanleLayer.h */,
+				B33382841BDF6118001D2F8F /* TowerPanleLayer.cpp */,
+				B33382871BDF8570001D2F8F /* GroupEnemy.h */,
+				B33382881BDF857B001D2F8F /* GroupEnemy.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -451,10 +463,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				B33382851BDF6118001D2F8F /* TowerPanleLayer.cpp in Sources */,
 				B33382801BDF2AEB001D2F8F /* GameManager.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B37996591BDE41D200B6849B /* TowerBase.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				B33382891BDF857C001D2F8F /* GroupEnemy.cpp in Sources */,
 				B37996551BDE11D600B6849B /* Thief.cpp in Sources */,
 				B379965D1BDE45C900B6849B /* ArrowTower.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -468,6 +482,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B379965E1BDE45C900B6849B /* ArrowTower.cpp in Sources */,
+				B33382861BDF6118001D2F8F /* TowerPanleLayer.cpp in Sources */,
+				B333828A1BDF857C001D2F8F /* GroupEnemy.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				B379964E1BDE04E400B6849B /* PlayLayer.cpp in Sources */,
 				B37996561BDE11D600B6849B /* Thief.cpp in Sources */,

@@ -23,14 +23,20 @@ public:
     Node* nextPoint();
     void runFllowPoint();
     void setPointsVector(Vector<Node*> points);
-    int getCurrHp() { return currHp;}
+    virtual void enemyExpload();
+    void createAndSetHpBar();
+    
+    CC_SYNTHESIZE(int, maxHp, MaxHp);
+    CC_SYNTHESIZE(int, currHp, CurrHp);
+    CC_SYNTHESIZE(float, hpPercentage, HpPercentage);
+    CC_SYNTHESIZE_READONLY(ProgressTimer*, hpBar, HpBar);
 private:
     Vector<Node*> pointsVector;
 protected:
     int pointCounter;
     Animation *animationRight;
     Animation *animationLeft;
-    int currHp;
+    Sprite* hpBgSprite;
     CC_SYNTHESIZE(float, runSpeed, RunSpeed);
 };
 
